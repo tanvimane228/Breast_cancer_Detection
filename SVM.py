@@ -22,7 +22,7 @@ X_train, X_test, Y_train, Y_test = train_test_split (X, Y, test_size = 0.20, ran
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
-X_test_scaled = X_train.transform(X_test)
+X_test_scaled = sc.transform(X_test)
 
 # FITTING SVM TO THE TRAINING MODEL
 classifier = SVC(kernel = 'linear', random_state = 0)
